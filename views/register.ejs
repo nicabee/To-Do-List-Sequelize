@@ -1,7 +1,5 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<% if( typeof(errors) != 'undefined') { %>
-  <center><h5 style="color:red"> <div class="alert alert-danger"><%= errors %></div> </h5></center>
- <% }%>
+
 <title>to do list</title>
 <body>
       <section>
@@ -16,6 +14,9 @@
                         <h1>To Do List</h1>
                       </div>
                     </div>
+                    <% if( typeof(errors) != 'undefined') { %>
+                      <center><h5 style="color:red"> <div class="alert alert-danger"><%= errors %></div> </h5></center>
+                     <% }%>
                     <div class="form-group">
                       <label for="username">Username: </label>
                       <input type="username" name="username" class="form-control" id="username" placeholder="Enter Username"  required>

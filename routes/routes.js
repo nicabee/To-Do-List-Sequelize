@@ -6,8 +6,6 @@ var session = require('express-session');
 
 
 
-//router.get("/register", accountController.createAccount);
-
 let initWebRoutes = (app) => {
     router.use(session({secret: 'mySecret', resave: false, saveUninitialized: false}));
 
@@ -25,7 +23,6 @@ let initWebRoutes = (app) => {
     router.get("/home",  (req,res) =>{
         var message = req.session.user1;
         var message2 = req.session.usertwo;
-       // var message = req.session.userthree;
         res.render("home", {data: message, tasks:message2});
 
     })

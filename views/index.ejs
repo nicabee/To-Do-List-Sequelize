@@ -1,10 +1,5 @@
 <html>
-<%  if( typeof(status)!= 'undefined'  ){ %>
- <center> <h5 style="color:green"> <div class="alert alert-success"><%= status%> </div></h5></center>
-<% }%>
-<%  if( typeof(err)!= 'undefined'  ){ %>
-  <center><h5 style="color:red"><div class="alert alert-danger"> <%= err%></div> </h5></center>
-<% }%>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -26,6 +21,12 @@
                   </div>
                   <div class="row align-items-center">
                   </div>
+                  <%  if( typeof(status)!= 'undefined'  ){ %>
+                    <center> <h5 style="color:green"> <div class="alert alert-success"><%= status%> </div></h5></center>
+                   <% }%>
+                   <%  if( typeof(err)!= 'undefined'  ){ %>
+                     <center><h5 style="color:red"><div class="alert alert-danger"> <%= err%></div> </h5></center>
+                   <% }%>
                   <div class="row align-items-center mt-4">
                     <div class="col">
                       <input type="username" name="username" class="form-control" placeholder="Username" required>

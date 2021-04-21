@@ -25,18 +25,14 @@ const task = instance.sequelize.define("tasks",{
           allowNull: false
       },
       createdAt: {
-     //   field: 'created_at',
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
         allowNull: false
       },
-     // completedAt: {
        updatedAt:{
-     //   field: 'completed_at',
         type: DataTypes.DATE
       },
       deletedAt:{
-        //   field: 'completed_at',
            type: DataTypes.DATE
       }
 },
@@ -45,7 +41,6 @@ const task = instance.sequelize.define("tasks",{
     updatedAt: true,
     deletedAt: true,
     tableName: "tasks"
-    //timestamps: false
   }
 )
 
