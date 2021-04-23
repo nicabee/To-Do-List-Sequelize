@@ -40,7 +40,7 @@ let initWebRoutes = (app) => {
     router.post("/login", accountController.loginAccount);
     
     router.get("/logout",(req,res)=>{
-        message = null
+        req.session.destroy();
         res.redirect('/')
     })
     return app.use("/", router);
